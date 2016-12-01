@@ -7,6 +7,10 @@ from bokeh.plotting import show, figure
 from bokeh.io import output_notebook
 from bokeh.models import HoverTool
 
+'''
+Collection of functions to recursively parse a directory and construct an interactive display of
+the results using networkx and Bokeh.
+'''
 
 def ParseDirTree(tree=os.getcwd(),G=nx.Graph(),itr=0,maxItr=100,**kwds):
     colorDict = kwds.pop('colors',{'dir':'red','file':'magenta'})
